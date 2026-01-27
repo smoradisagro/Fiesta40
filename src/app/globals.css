@@ -1,0 +1,89 @@
+:root {
+  --color-red: #D90429;
+  --color-red-dark: #8D0801;
+  --color-yellow: #FFD60A;
+  --color-cyan: #00B4D8;
+  --color-pink: #FF006E;
+  --color-off-white: #F8F9FA;
+  --color-text: #212529;
+  
+  --font-inter: 'Inter', sans-serif;
+  --font-rye: 'Rye', serif;
+  --font-marker: 'Permanent Marker', cursive;
+
+  --border-rough: 3px solid var(--color-text);
+  --shadow-hard: 4px 4px 0px var(--color-text);
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-text);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(var(--color-yellow) 1px, transparent 1px),
+    radial-gradient(var(--color-red) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.main-container {
+  max-width: 480px; /* Mobile first constraint */
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  border-left: var(--border-rough);
+  border-right: var(--border-rough);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-rye);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.marker-text {
+  font-family: var(--font-marker);
+  color: var(--color-red);
+}
+
+.btn-andres {
+  background: var(--color-yellow);
+  color: var(--color-red-dark);
+  border: var(--border-rough);
+  box-shadow: var(--shadow-hard);
+  padding: 1rem 2rem;
+  font-family: var(--font-rye);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-andres:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--color-text);
+}
+
+.section-container {
+  padding: 2rem 1.5rem;
+  border-bottom: 2px dashed var(--color-red);
+  position: relative;
+}
+
+.section-container:nth-child(even) {
+  background-color: #fff8f0;
+}
+
+.card {
+  border: 2px solid var(--color-text);
+  padding: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+  transform: rotate(-1deg);
+}
+
+.card:nth-child(even) {
+  transform: rotate(1deg);
+}
