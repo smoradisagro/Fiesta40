@@ -14,15 +14,15 @@ export default function Home() {
     ];
 
     return (
-        <main className="min-h-screen pb-10 flex flex-col items-center">
+        <main className="min-h-screen pb-20 flex flex-col items-center">
             {/* Header Image */}
-            <div className="w-full max-w-md mt-6 px-4 mb-4 animate-pulse-slow">
+            <div className="w-full max-w-md mt-8 px-6 mb-6">
                 <Image
                     src="/assets/header.png"
                     alt="Cumpleaños Sebastián 40"
                     width={600}
                     height={300}
-                    className="w-full h-auto drop-shadow-xl"
+                    className="w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                     priority
                 />
             </div>
@@ -33,22 +33,27 @@ export default function Home() {
                     <Link
                         key={i}
                         href={mod.href}
-                        className="block relative transform transition-all duration-300 hover:scale-110 active:scale-95 hover:rotate-2 group"
+                        className="block relative group focus:outline-none"
                     >
-                        <div className="relative aspect-square drop-shadow-2xl">
+                        <div className="relative aspect-square transition-transform duration-300 transform group-hover:scale-110 group-hover:rotate-3 group-active:scale-95 shadow-2xl rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/20">
                             <Image
                                 src={mod.src}
                                 alt={mod.title}
                                 fill
-                                className="object-contain"
+                                className="object-cover"
                                 sizes="(max-width: 768px) 50vw, 33vw"
                             />
+                        </div>
+                        <div className="absolute -bottom-3 left-0 w-full text-center">
+                            <span className="bg-black/80 text-[#FFD60A] text-xs font-rye px-2 py-1 rounded border border-[#FFD60A] shadow-md uppercase tracking-wider">
+                                {mod.title}
+                            </span>
                         </div>
                     </Link>
                 ))}
             </div>
 
-            <div className="text-center mt-12 text-white font-marker text-sm px-4 bg-black/50 p-2 rounded transform -rotate-1">
+            <div className="text-center mt-16 text-white font-marker text-xs px-4 bg-black/60 p-2 rounded-full transform -rotate-1 border border-white/30 backdrop-blur-md">
                 Diseñado estilo Andrés Carne de Res ❤️
             </div>
         </main>

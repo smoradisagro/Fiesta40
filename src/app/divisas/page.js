@@ -1,76 +1,71 @@
 "use client";
 import { useState } from 'react';
 import { Calculator, DollarSign } from "lucide-react";
+import Image from "next/image";
 import BackButton from "../components/BackButton";
 
 export default function DivisasPage() {
     const [cop, setCop] = useState('');
-
     const RATE_USD = 0.00025;
     const RATE_GTQ = 0.0019;
 
     return (
-        <main className="min-h-screen bg-indigo-50">
+        <main className="min-h-screen p-4 flex flex-col items-center pb-20">
             <BackButton />
-            <section id="divisas" className="section-container border-none pt-0 pb-20">
-                <h2 className="text-3xl text-center mb-8 rotate-[-1deg]">
-                    <span className="bg-green-600 text-white px-4 py-2 border-black border-2 shadow-hard">
-                        $$$ y TAXES
+
+            <div className="bg-white/95 p-6 border-4 border-black shadow-[8px_8px_0px_#000] max-w-md w-full mt-4">
+                <div className="flex justify-center -mt-16 mb-4">
+                    <div className="w-24 h-24 relative drop-shadow-xl bg-white rounded-full border-4 border-black p-2">
+                        <Image src="/assets/btn_divisas.png" alt="Money" fill className="object-contain p-1" />
+                    </div>
+                </div>
+
+                <h2 className="text-3xl text-center mb-6 rotate-[-1deg]">
+                    <span className="bg-green-600 text-white px-4 py-2 border-black border-2 shadow-hard font-rye">
+                        $$$ MONEY
                     </span>
                 </h2>
 
                 {/* Calculator */}
-                <div className="card bg-white mb-8 border-4 border-green-600">
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <Calculator className="text-green-600" />
-                        <h3 className="font-bold text-xl">Calculadora Rápida</h3>
-                    </div>
+                <div className="bg-green-50 p-4 border-2 border-green-600 mb-8 rounded-xl relative">
+                    <div className="absolute -top-3 -left-3 bg-green-600 text-white p-1 rounded border border-black"><Calculator size={20} /></div>
 
-                    <div className="flex flex-col gap-2">
-                        <label className="text-xs font-bold uppercase text-gray-500">Pesos Colombianos (COP)</label>
-                        <input
-                            type="number"
-                            value={cop}
-                            onChange={(e) => setCop(e.target.value)}
-                            placeholder="Ej: 50000"
-                            className="border-2 border-black p-2 text-xl font-mono w-full"
-                        />
-                    </div>
+                    <label className="text-xs font-bold uppercase text-gray-500 mb-1 block">Pesos Colombianos (COP)</label>
+                    <input
+                        type="number"
+                        value={cop}
+                        onChange={(e) => setCop(e.target.value)}
+                        placeholder="50000"
+                        className="border-2 border-black p-2 text-2xl font-mono w-full text-center focus:outline-none focus:ring-4 ring-green-300"
+                    />
 
-                    <div className="grid grid-cols-2 gap-4 mt-4 text-center">
-                        <div className="bg-green-100 p-2 border border-green-300">
-                            <p className="text-xs text-gray-500 font-bold">USD (Aprox)</p>
-                            <p className="text-xl font-bold text-green-800">
-                                ${(cop * RATE_USD).toFixed(2)}
-                            </p>
+                    <div className="grid grid-cols-2 gap-2 mt-4">
+                        <div className="text-center bg-white border border-gray-300 p-2 rounded">
+                            <p className="text-xs text-gray-400 font-bold">USD</p>
+                            <p className="font-bold text-green-700 text-lg">${(cop * RATE_USD).toFixed(2)}</p>
                         </div>
-                        <div className="bg-blue-100 p-2 border border-blue-300">
-                            <p className="text-xs text-gray-500 font-bold">Quetzales (Aprox)</p>
-                            <p className="text-xl font-bold text-blue-800">
-                                Q{(cop * RATE_GTQ).toFixed(2)}
-                            </p>
+                        <div className="text-center bg-white border border-gray-300 p-2 rounded">
+                            <p className="text-xs text-gray-400 font-bold">GTQ</p>
+                            <p className="font-bold text-blue-700 text-lg">Q{(cop * RATE_GTQ).toFixed(2)}</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Tax Free Guide */}
-                <div className="card rotate-1 bg-yellow-50">
+                <div className="bg-yellow-50 p-4 border-2 border-black rotate-1 relative">
+                    <div className="absolute -top-4 right-0 bg-red-600 text-white font-bold text-xs px-2 py-1 rotate-3 border border-black">IMPORTANTE</div>
                     <h3 className="font-black text-lg mb-2 flex items-center gap-2">
                         <DollarSign size={20} className="bg-black text-white rounded-full p-0.5" />
-                        ABC DEVOLUCIÓN IVA (TAX FREE)
+                        TAX FREE (IVA)
                     </h3>
-                    <ul className="text-sm space-y-3 list-decimal list-inside">
-                        <li>Al comprar, pide siempre <strong>Factura Electrónica</strong> a tu nombre (pasaporte).</li>
-                        <li>Aplica para: Ropa, calzado, marroquinería, artesanías.</li>
-                        <li>Compra mínima por factura: 3 UVT (~$130.000 COP).</li>
-                        <li className="bg-red-100 p-1 border border-red-200 rounded">
-                            <strong>OJO:</strong> Llega al aeropuerto <span className="font-bold text-red-600">4 HORAS ANTES</span>.
-                        </li>
-                        <li>Ubica la oficina de la <strong>DIAN</strong> antes del Check-in.</li>
-                        <li>Debes mostrar: Pasaporte, Pasabordo, Facturas y los <strong>Productos comprados</strong> (no los guardes en maleta documentada antes de esto).</li>
+                    <ul className="text-sm space-y-2 list-decimal list-inside font-marker text-gray-800">
+                        <li>Pide <strong>Factura Electrónica</strong>.</li>
+                        <li>Mínimo $130.000 COP por factura.</li>
+                        <li>Llega al aeropuerto <strong>4 HORAS ANTES</strong>.</li>
+                        <li>Busca la DIAN antes de hacer check-in (necesitas mostrar la mercancía).</li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </main>
     );
 }

@@ -1,74 +1,75 @@
 import { Calendar } from "lucide-react";
+import Image from "next/image";
 import BackButton from "../components/BackButton";
 
 export default function ItinerarioPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen p-4 flex flex-col items-center">
             <BackButton />
-            <section id="itinerario" className="section-container border-none pt-0">
-                <h2 className="text-3xl text-center mb-8">
-                    <span className="bg-black text-white px-4 py-2 border-yellow-400 border-b-4 rotate-1 inline-block">
-                        ITINERARIO DE FIESTA
+
+            <div className="bg-white/95 p-6 border-4 border-black shadow-[8px_8px_0px_#000] rotate-1 max-w-md w-full mt-4">
+                <div className="flex justify-center -mt-16 mb-4">
+                    <div className="w-24 h-24 relative drop-shadow-xl bg-white rounded-full border-4 border-black p-2">
+                        <Image src="/assets/btn_itinerario.png" alt="Fiesta" fill className="object-cover rounded-full" />
+                    </div>
+                </div>
+
+                <h2 className="text-3xl text-center mb-6">
+                    <span className="bg-black text-white px-4 py-2 border-yellow-400 border-b-4 -rotate-1 inline-block font-rye">
+                        ITINERARIO
                     </span>
                 </h2>
 
-                <div className="space-y-6">
+                <div className="space-y-6 font-marker">
                     {/* Miércoles */}
-                    <div className="card bg-red-50 border-red-500">
+                    <div className="bg-red-50 border-l-4 border-red-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-red-600 text-white font-bold px-2 py-1 rounded">MIÉRCOLES 12</span>
-                            <span className="font-marker text-xl">Calentando Motores</span>
+                            <span className="bg-red-600 text-white font-bold px-2 py-1 rounded text-xs">MIÉRCOLES 12</span>
                         </div>
-                        <ul className="list-disc list-inside">
+                        <ul className="list-disc list-inside text-sm">
                             <li>Llegada y Check-in</li>
-                            <li><strong className="text-red-600">6:00 PM:</strong> Cena zona Parque 93</li>
+                            <li><strong className="text-red-800">6:00 PM:</strong> Cena zona Parque 93</li>
                             <li>Drinks tranqui 🍹</li>
                         </ul>
                     </div>
 
                     {/* Jueves */}
-                    <div className="card bg-yellow-50 border-yellow-500 rotate-1">
+                    <div className="bg-yellow-50 border-l-4 border-yellow-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-yellow-500 text-black font-bold px-2 py-1 rounded">JUEVES 13</span>
-                            <span className="font-marker text-xl">Bogotá Cultural</span>
+                            <span className="bg-yellow-500 text-black font-bold px-2 py-1 rounded text-xs">JUEVES 13</span>
                         </div>
-                        <ul className="list-disc list-inside space-y-2">
-                            <li>🥣 Desayuno en Hotel (¡Caldo de costilla!)</li>
-                            <li>🏛️ Recorrido Centro Histórico (Candelaria, Plaza Bolívar)</li>
-                            <li>🍲 Almuerzo Típico (¿Ajiaco en La Puerta Falsa?)</li>
-                            <li>🍻 Noche de propuesta (Zona G / Chapinero)</li>
+                        <ul className="list-disc list-inside text-sm space-y-1">
+                            <li>🥣 Desayuno (¡Caldo de costilla!)</li>
+                            <li>🏛️ Centro Histórico</li>
+                            <li>🍲 Almuerzo Típico</li>
+                            <li>🍻 Noche Zona G / Chapinero</li>
                         </ul>
                     </div>
 
                     {/* Viernes */}
-                    <div className="card bg-cyan-50 border-cyan-500 -rotate-1 relative">
-                        <div className="absolute top-0 right-0 text-4xl animate-bounce">🎉</div>
+                    <div className="bg-cyan-50 border-l-4 border-cyan-500 p-3 relative overflow-hidden">
+                        <div className="absolute -right-2 top-0 text-4xl animate-bounce opacity-50">🎉</div>
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-cyan-500 text-white font-bold px-2 py-1 rounded">VIERNES 14</span>
-                            <span className="font-marker text-xl">¡LA GRAN FIESTA!</span>
+                            <span className="bg-cyan-500 text-white font-bold px-2 py-1 rounded text-xs">VIERNES 14</span>
                         </div>
-                        <ul className="list-disc list-inside space-y-2">
-                            <li>Mañana libre / Spa en hotel</li>
-                            <li><strong className="text-red-600 text-xl">6:00 PM:</strong> 🎉 BUS PARTY ▶ ANDRÉS CHÍA</li>
-                            <li>🚌 Salida desde el Hotel</li>
-                            <li>🥩 Rumba hasta que el cuerpo aguante</li>
+                        <ul className="list-disc list-inside text-sm space-y-1">
+                            <li>Mañana libre / Spa</li>
+                            <li><strong className="text-red-600 text-lg">6:00 PM:</strong> BUS PARTY ▶ ANDRÉS CHÍA 🥩💃</li>
                         </ul>
                     </div>
 
                     {/* Sábado */}
-                    <div className="card bg-pink-50 border-pink-500">
+                    <div className="bg-pink-50 border-l-4 border-pink-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-pink-500 text-white font-bold px-2 py-1 rounded">SÁBADO 15</span>
-                            <span className="font-marker text-xl">Compras & Chill</span>
+                            <span className="bg-pink-500 text-white font-bold px-2 py-1 rounded text-xs">SÁBADO 15</span>
                         </div>
-                        <ul className="list-disc list-inside space-y-2">
-                            <li>🛍️ Mañana de Compras (Zona T / Andino)</li>
-                            <li>🍻 <strong className="text-red-600">Tardeo:</strong> Irish Pub Zona T</li>
-                            <li>✈️ Preparar regreso</li>
+                        <ul className="list-disc list-inside text-sm space-y-1">
+                            <li>🛍️ Compras (Zona T / Andino)</li>
+                            <li>🍻 Tardeo: Irish Pub Zona T</li>
                         </ul>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
     );
 }
