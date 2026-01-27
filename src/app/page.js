@@ -39,9 +39,9 @@ export default function Home() {
                             <Image
                                 src={mod.src}
                                 alt={mod.title}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 50vw, 33vw"
+                                width={500}
+                                height={500}
+                                className="object-cover w-full h-full"
                             />
                         </div>
                         <div className="absolute -bottom-3 left-0 w-full text-center">
