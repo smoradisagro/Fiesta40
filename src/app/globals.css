@@ -6,7 +6,7 @@
   --color-pink: #FF006E;
   --color-off-white: #F8F9FA;
   --color-text: #212529;
-  
+
   --font-inter: 'Inter', sans-serif;
   --font-rye: 'Rye', serif;
   --font-marker: 'Permanent Marker', cursive;
@@ -19,24 +19,27 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-text);
   overflow-x: hidden;
-  background-image: 
-    radial-gradient(var(--color-yellow) 1px, transparent 1px),
-    radial-gradient(var(--color-red) 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  /* V3: User generated texture */
+  background-image: url('/assets/bg_main.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .main-container {
-  max-width: 480px; /* Mobile first constraint */
+  max-width: 480px;
+  /* Mobile first constraint */
   margin: 0 auto;
   min-height: 100vh;
   background: #fff;
   border-left: var(--border-rough);
   border-right: var(--border-rough);
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-rye);
   text-transform: uppercase;
   letter-spacing: 1px;
