@@ -15,8 +15,8 @@ export default function Home() {
 
     return (
         <main className="min-h-screen pb-20 flex flex-col items-center">
-            {/* Header Image */}
-            <div className="w-full max-w-md mt-8 px-6 mb-6">
+            {/* Header Image - Reduced spacing Top (1.5cm approx ~ mt-6) */}
+            <div className="w-full max-w-md mt-6 px-6 mb-6">
                 <Image
                     src="/assets/header.png"
                     alt="Cumpleaños Sebastián 40"
@@ -53,8 +53,22 @@ export default function Home() {
                 ))}
             </div>
 
-            <div className="text-center mt-16 text-white font-marker text-xs px-4 bg-black/60 p-2 rounded-full transform -rotate-1 border border-white/30 backdrop-blur-md">
-                Diseñado estilo Andrés Carne de Res ❤️
+            {/* WhatsApp Group Button */}
+            <div className="mt-12 mb-8 animate-bounce-slow">
+                <a
+                    href="https://chat.whatsapp.com/DwU6hoQXkIG8Uo79TCEWTW?mode=gi_t"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-[#25D366] text-white font-black px-6 py-3 rounded-full border-2 border-white shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-110 transition-transform"
+                >
+                    <Image src="/assets/btn_whatsapp.png" width={24} height={24} alt="WA" />
+                    UNIRME AL GRUPO
+                </a>
+            </div>
+
+            {/* Credits */}
+            <div className="text-center text-white font-marker text-xs px-4 bg-black/60 p-2 rounded-full transform -rotate-1 border border-white/30 backdrop-blur-md">
+                Diseñado por Sebastián Mora ❤️
             </div>
         </main>
     );

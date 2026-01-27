@@ -35,10 +35,9 @@ body {
   /* Mobile first constraint */
   margin: 0 auto;
   min-height: 100vh;
-  background: #fff;
-  border-left: var(--border-rough);
-  border-right: var(--border-rough);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  /* V5: Transparent to show body texture on mobile */
+  background: transparent;
+  /* Removed border/shadow to blend better */
 }
 
 h1,
