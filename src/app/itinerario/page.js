@@ -24,7 +24,7 @@ export default function ItinerarioPage() {
                     {/* Miércoles */}
                     <div className="bg-red-50 border-l-4 border-red-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-red-600 text-white font-bold px-2 py-1 rounded text-xs">MIÉRCOLES 12</span>
+                            <span className="bg-red-600 text-white font-bold px-2 py-1 rounded text-xs">MIÉRCOLES 11</span>
                         </div>
                         <ul className="list-disc list-inside text-sm">
                             <li>Llegada y Check-in</li>
@@ -36,7 +36,7 @@ export default function ItinerarioPage() {
                     {/* Jueves */}
                     <div className="bg-yellow-50 border-l-4 border-yellow-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-yellow-500 text-black font-bold px-2 py-1 rounded text-xs">JUEVES 13</span>
+                            <span className="bg-yellow-500 text-black font-bold px-2 py-1 rounded text-xs">JUEVES 12</span>
                         </div>
                         <ul className="list-disc list-inside text-sm space-y-1">
                             <li>🥣 Desayuno (¡Caldo de costilla!)</li>
@@ -50,7 +50,7 @@ export default function ItinerarioPage() {
                     <div className="bg-cyan-50 border-l-4 border-cyan-500 p-3 relative overflow-hidden">
                         <div className="absolute -right-2 top-0 text-4xl animate-bounce opacity-50">🎉</div>
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-cyan-500 text-white font-bold px-2 py-1 rounded text-xs">VIERNES 14</span>
+                            <span className="bg-cyan-500 text-white font-bold px-2 py-1 rounded text-xs">VIERNES 13</span>
                         </div>
                         <ul className="list-disc list-inside text-sm space-y-1">
                             <li>Mañana libre / Spa</li>
@@ -61,7 +61,7 @@ export default function ItinerarioPage() {
                     {/* Sábado */}
                     <div className="bg-pink-50 border-l-4 border-pink-500 p-3">
                         <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-pink-500 text-white font-bold px-2 py-1 rounded text-xs">SÁBADO 15</span>
+                            <span className="bg-pink-500 text-white font-bold px-2 py-1 rounded text-xs">SÁBADO 14</span>
                         </div>
                         <ul className="list-disc list-inside text-sm space-y-1">
                             <li>🛍️ Compras (Zona T / Andino)</li>
