@@ -1,6 +1,8 @@
+"use client";
 import { Plane } from "lucide-react";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
+import { track } from '@vercel/analytics/react';
 
 export default function ViajePage() {
     return (
@@ -35,6 +37,7 @@ export default function ViajePage() {
                             href="https://booking.avianca.com/av/booking/avail?departureDate=2026-03-11&tripType=round-trip&from=GUA&to=BOG&nbAdults=1&nbYoungs=0&nbChildren=0&nbInfants=0&language=ES&platform=WEBB2C&pointOfSale=GT&returnDate=2026-03-15&promoCode=&negoFare=&accessMethod=default&backend=PRD&FriendlyIDNegoF=&utmCampaign=&_ga=2.145670839.2042124658.1769491932-75703237.1769491932"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => track('Click Avianca')}
                             className="btn-andres w-full text-lg animate-pulse-slow hover:animate-none"
                         >
                             Reservar en Avianca ✈️
