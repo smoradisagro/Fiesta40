@@ -10,12 +10,15 @@ export const metadata = {
     description: "Celebración estilo Andrés Carne de Res",
 };
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({ children }) {
     return (
         <html lang="es">
             <body className={`${inter.variable} ${rye.variable} ${permanentMarker.variable} font-sans`}>
                 <div className="main-container">
                     {children}
+                    <Analytics />
                 </div>
             </body>
         </html>
