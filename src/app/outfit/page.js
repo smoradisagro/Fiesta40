@@ -1,4 +1,4 @@
-import { CloudRain, Sun, Moon, PartyPopper, Shirt, Footprints } from "lucide-react";
+import { CloudRain, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
 
